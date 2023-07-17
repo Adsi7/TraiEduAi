@@ -1,4 +1,5 @@
-# TraiEduAi
+# AI Tools for Education Website
+
 Description
 The AI Tools for Education Website is a dynamic platform that harnesses the power of Artificial Intelligence to enhance the learning experience for students and educators. This web application provides a range of AI-based educational tools and resources to facilitate interactive and engaging learning.
 
