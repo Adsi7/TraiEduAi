@@ -1,6 +1,6 @@
 # AI Tools for Education Website
 
-![AI Tools for Education](url-to-your-website-screenshot.png)
+
 
 ## Description
 
@@ -15,10 +15,4 @@ The AI Tools for Education Website is a dynamic platform that harnesses the powe
 - **User Authentication and Personalization:** To enhance the user experience, we provide user authentication and personalization features. Registered users can access personalized recommendations based on their preferences and learning history.
 
 - **Responsive Design:** The AI Tools for Education Website is built with a responsive design, ensuring seamless access and usability across different devices, including desktops, tablets, and smartphones.
-
-## Getting Started
-
-To explore the AI Tools for Education Website and utilize its powerful features, follow these steps:
-
-1. Clone the repository to your local machine using the following command:
 
