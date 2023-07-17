@@ -1,0 +1,10 @@
+@font-face {
+    font-family: myFont_light;
+    src: url(/static/Fonts/SF-Pro-Display-Thin.otf);
+  }
+  
+  @font-face {
+    font-family: myFont_medium;
+    src: url(/static/Fonts/SF-Pro-Display-Medium.otf);
+  }
+

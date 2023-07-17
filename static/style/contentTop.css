@@ -1,0 +1,131 @@
+ @import url('/static/style/style.css');
+
+*{
+    margin: 0;
+    padding: 0;
+  
+  }
+   .body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+  } 
+
+  /* flex container */
+  .flex2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  img{
+    object-fit: cover;
+  }
+
+/* background top */
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    text-align: center;
+  } 
+
+  /* elements in top  */
+  .var{
+    white-space: nowrap;
+    font-size:x-large;
+    color: white;
+  }
+  
+  .text-white{  
+  
+    font-weight: bold;
+    font-size: 2.5rem;
+  
+  }
+
+  /* Media Queries */
+
+/* Small screens (up to 576px) */
+@media (max-width: 576px) {
+  .box {
+    padding: 8px;
+   
+  }
+  .box:hover input{
+    width: 150px 
+  }
+}
+
+/* Medium screens (between 576px and 992px) */
+@media (min-width: 576px) and (max-width: 992px) {
+  .box {
+    padding: 10px;
+  }
+  .box:hover input{
+    width: 200px 
+  }
+}
+
+/* Large screens (between 992px and 1200px) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .box {
+    padding: 12px;
+  }
+  .box:hover input{
+    width: 250px 
+  }
+}
+
+/* Extra-large screens (above 1200px) */
+@media (min-width: 1200px) {
+  .box {
+    padding: 16px;
+  }
+}
+
+
+
+
+/* Filter custom  */
+input[type="checkbox"]:checked {
+  background-color: rgb(37, 150, 190);
+}
+
+ .form-check-input[type=checkbox] {
+  cursor: pointer;
+}
+
+
+.accordion-button{
+  cursor: default !important;
+}
+.accordion-button:not(.collapsed)::after{
+  display: none;
+} 
+
+
+
+/*  Button */
+.btn-farbe{
+  background-color: rgb(37, 150, 190) !important;
+ 
+}
+
+.btn-underline-on-hover:hover {
+  text-decoration: underline !important;
+}
+
+.button-box button {
+  border-radius: 0;
+}
+
+.an{
+  color: black !important;
+}
+
+

@@ -1,0 +1,137 @@
+@import url('/static/style/style.css');
+
+body {
+  font-family: 'myFont_medium', Arial; 
+  font-style: normal;
+  line-height: 1.5;
+  font-weight: 400;
+  color: black;
+  background-color: white;
+}
+
+/*Überschriftsleiste*/
+
+.center-content{
+  background-image: url(/static/images/img_toolpaper/background.png);
+  background-size: cover;
+}
+
+.text-white{
+  font-weight: bold;
+  font-size: 2.5rem;
+
+}
+
+
+/*Button für Paper/Tools*/
+
+.btn-lg:active {/*das ist noch der falsche befehl*/
+  background-color: rgb(37 150 190) !important; /* Hintergrundfarbe */
+}
+
+.btn-farbe{
+  background-color: rgb(37, 150, 190) !important;
+ 
+}
+input[type="checkbox"]:checked {
+  background-color: rgb(37, 150, 190);
+}
+
+.form-check-input[type=checkbox] {
+  cursor: pointer;
+}
+
+
+.accordion-button{
+  cursor: default !important;
+}
+.accordion-button:not(.collapsed)::after{
+  display: none;
+}
+
+tr:not(:first-child) {
+  cursor: pointer;
+}
+
+
+
+/*Modalfenster*/
+
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.modal-dialog {
+  width: 80% !important;
+  max-width: 900px !important;
+}
+ 
+.modal-title>h2 {
+  font-family: 'myFont_medium' !important;
+  font-size: large;
+  text-align: center;
+}
+
+.container-text {
+  word-wrap: break-word;
+  padding: 1%; 
+  
+}
+
+.container-text p {
+    text-align: justify;
+  }
+
+  .container-characteristics {
+    word-wrap: break-word;
+    padding: 1%; 
+    
+  }
+/*Hier ist der Abstract drin*/
+.col-8{
+  text-align: left;
+
+}
+.col-8>p {
+  margin-left: 5%;
+}
+
+/*Hier sind Charakteristika drin*/
+
+.custom-col-4 {
+  flex-basis: 25% !important;
+  max-width: 25% !important;
+}
+
+.modal-footer a{
+  color: rgb(37 150 190);
+  text-decoration: none;
+}
+
+.modal-footer a:hover{
+  text-decoration: underline;
+  color: rgb(37 150 190);
+}
+
+@media (max-width: 991px) {
+  .hiding {
+    display: none !important;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .hiding {
+    display: none !important;
+  }
+}
+
+
+.hiding{
+margin-left: 2rem;
+}

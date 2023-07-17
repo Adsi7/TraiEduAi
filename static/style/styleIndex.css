@@ -1,0 +1,133 @@
+@import url('/static/style/style.css');
+
+
+html,
+body {
+
+  font-family: 'myFont_medium', Arial;
+  font-style: normal;
+  line-height: 1.5;
+  font-weight: 400;
+  color: black;
+  background-color: white;
+}
+
+.inputt {
+  width: 20px;
+  height: 20px;
+}
+
+
+/*Hand und Logo ganz oben*/
+
+.hand {
+  height: 20%;
+  width: 90px;
+}
+
+.logo {
+  width: 200px;
+  height: 30%;
+
+}
+
+/* Bereich oben: Collection of Ai-Tools */
+
+header.masthead {
+  position: relative;
+  background-image: url(/static/images/img_index/wallpaper.png);
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+.masthead-subheading {
+  font-family: 'myFont_medium', Arial !important;
+  font-size: 2rem !important;
+  text-align: center !important;
+}
+
+
+/*Hier der Teil bei dem erklärt wird was Transferable Skills sind (Text + Bild)*/
+
+.col-md-6 a {
+  font-weight: 700 !important;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.col-md-6 a:hover {
+  text-decoration: underline !important;
+  text-decoration-color: black !important;
+  color: black !important;
+
+}
+
+
+
+/*Hier die Unterteilung in 3 verschiedene Unterklassen von Skills: cognitive, social and emotional*/
+
+.portfolio-caption-subheading {
+  font-family: 'myFont_medium', Arial !important;
+  font-style: normal;
+}
+
+.portfolio-hover {
+  background: rgba(37, 150, 190, 0.7) !important;
+}
+
+/*anderes icon, aber das klappt noch nicht*/
+.fa-plus::before {
+  content: "\F431" !important;
+}
+
+
+
+/* tools und paper button */
+
+.d-grid {
+  display: flex !important;
+  justify-content: center;
+}
+
+.d-grid form {
+  margin-right: 10px;
+}
+
+.d-grid form:last-child {
+  margin-right: 0;
+}
+
+.d-grid form button[type="submit"] {
+  color: white;
+  border: solid 1px;
+  background-color: rgb(37, 150, 190);
+  flex: 1;
+}
+
+
+/*Modalfenster*/
+
+
+.modal-dialog {
+  max-width: fit-content !important;
+  max-height: fit-content !important;
+}
+
+.modal-content{
+  padding-top: 1rem !important;
+  padding-bottom: 0% !important;
+}
+
+.mb-5{
+  margin-bottom: 0% !important;
+}
+
+.card {
+  background-color: rgba(211, 211, 211, 0.4) !important;
+}
+
+
