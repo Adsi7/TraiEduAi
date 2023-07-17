@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/img_menu/hand.png') }}" type="image/png">
+    
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS and JavaScript -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static' , filename='style/menuGross.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='style/styleIndex.css') }}">
+
+    <title>Trai.edu</title>
+
+</head>
+
+
+<body id="page-top">
+    <!-- Navigation-->
+    <header class="cd-header fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
+            <div class="container-fluid">
+              <a class="navbar-brand hiding" href="{{ url_for('index') }}">
+                <img  src="{{ url_for('static', filename='images/img_menu/hand.png') }}" alt="Left Image" height="75">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link an" href="{{ url_for('index') }} ">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="{{ url_for('about') }}">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <form action="{{ url_for('allPaper') }}" method="post">
+                      <button type="submit" name="skill" value="" class="btn btn-link nav-link">Papers</button>
+                    </form>
+                  </li>
+                  <li class="nav-item">
+                    <form action="{{ url_for('allTools') }}" method="post">
+                      <button type="submit" name="skill" value="" class="btn btn-link nav-link">Tools</button>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+              <a class="navbar-brand hiding" href="{{ url_for('index') }}">
+                <img  src="{{ url_for('static', filename='images/img_menu/traiTr.png') }}" alt="Right Image"  height="90">
+              </a>
+            </div>
+          </nav>
+
+    </header>
+
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-heading text-uppercase">AI TOOLS IN EDUCATION</div>
+            <div class="masthead-subheading">As AI enters a new era, the time has come to harness its potential to
+                enhance our skillsets. Explore our unique space dedicated to discovering AI-powered tools that unlock
+                your
+                true potential in transferable skills. Empower your journey and become the best version of yourself with
+                our
+                curated collection of AI skill enhancement tools.</div>
+            <!--<a class="btn btn-primary btn-xl text-uppercase" href="#services">About</a>-->
+        </div>
+    </header>
+
+    <!--Erklärung: Was ist ein Transferable Skill?-->
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>WHAT ARE TRANSFERABLE SKILLS?</h1>
+                <p>Transferable skills refer to a broad range of abilities encompassing cognitive, emotional and
+                    social competencies. These skills can be applied across different contexts and are not limited
+                    to specific tasks or industries. They empower individuals to navigate diverse challenges,
+                    communicate effectively, solve problems, and build strong relationships, fostering personal and
+                    professional growth.</p>
+                <a href="{{ url_for('TransferableSkills') }}">LEARN MORE</a>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <div class="image-container">
+                    <img class="img-fluid" src="{{ url_for('static', filename='images/img_index/skills.png') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Skill Groups Grid-->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="section-heading text-uppercase">skill areas</h1>
+                <h3 class="section-subheading text-muted"></h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-info-circle fa-3x"></i></div>
+                            </div>
+                            <!-- Image als Button dialogfenster-->
+                            <img class="img-fluid"
+                                src="{{ url_for('static', filename='images/img_index/cognitive.png') }}" alt="...">
+
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Cognitive Skills</div>
+                            <div class="portfolio-caption-subheading text-muted">Mental processes for knowledge
+                                acquisition and approaching challenges with a strategic mindset.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- item 2-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-info-circle fa-3x"></i></i></div>
+                            </div>
+                            <img class="img-fluid" src="{{ url_for('static', filename='images/img_index/social.png') }}"
+                                alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Social Skills</div>
+                            <div class="portfolio-caption-subheading text-muted">Interpersonal competencies for
+                                fostering positive and meaningful interactions with others.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- item 3-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-info-circle fa-3x"></i></div>
+
+                            </div>
+                            <img class="img-fluid"
+                                src="{{ url_for('static', filename='images/img_index/emotional.png') }} " alt="...">
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Emotional Skills</div>
+                            <div class="portfolio-caption-subheading text-muted">Proficiencies in understanding,
+                                managing, and expressing emotions in oneself and others.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">Copyright &copy; Trai.edu 2023</div>
+                <div class="col-lg-4 my-3 my-lg-0" style="opacity: 0 !important;;">
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none me-3" href="{{ url_for('imprint') }}">Imprint</a>
+                    <a class="link-dark text-decoration-none" href="#!"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+   <!-- Portfolio Modals-->
+    <!-- Portfolio item 1 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h1>Cognitive Skills</h1>
+                <div class="container">
+                    <div class="modal-body">
+                        <!-- Project details-->
+                        <div class="container justify-content-center">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                                    <div class="card shadow p-3 mb-5 bg-white rounded">
+                                        <!-- Add your content for container 1 -->
+                                        <h4>Creativity</h4>
+                                        <p>Ability to generate original ideas, solutions, and concepts, to think
+                                            outside the box, take risks and
+                                            challenge conventional thinking; helps to innovate, solve problems,
+                                            and achieve success in a variety of
+                                            fields.</p>
+                                        <div class="d-grid gap-2 d-md-block mt-auto">
+                                            <form action="{{url_for('tools')}}" method="post">
+                                                <button type="submit" name="skill" class="btn btn-primary"
+                                                    value="Creativity">
+                                                    <span class="place">Tools</span>
+                                                </button>
+                                            </form>
+                                            <form action="{{url_for('paper')}}" method="post">
+                                                <button type="submit" class="btn btn-primary" name="skill"
+                                                    value="Creativity">
+                                                    <span class="place">Paper</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                                    <div class="card shadow p-3 mb-5 bg-white rounded">
+                                        <!-- Add your content for container 2 -->
+                                        <h4>Organization</h4>
+                                        <p>Ability to manage one's own time, tasks, and priorities in an effective and efficient manner, without external supervision or direction. It involves setting goals, developing plans, prioritizing tasks, and managing one's own workload in order to meet deadlines and achieve objectives.</p>
+                                        <div class="d-grid gap-2 d-md-block mt-auto">
+                                            <form action="{{url_for('tools')}}" method="post">
+                                                <button type="submit" name="skill" class="btn btn-primary"
+                                                    value="Organization">
+                                                    <span class="place">Tools</span>
+                                                </button>
+                                            </form>
+                                            <form action="{{url_for('paper')}}" method="post">
+                                                <button type="submit" class="btn btn-primary" name="skill"
+                                                    value="Organization">
+                                                    <span class="place">Paper</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4 d-flex ">
+                                    <div class="card shadow p-3 mb-5 bg-white rounded">
+                                        <!-- Add your content for container 3 -->
+                                        <h4>Critical Reasoning</h4>
+                                        <p>Ability to analyze information, evaluate arguments, and draw logical conclusions. It requires individuals to use their analytical skills, judgment, and reasoning abilities to identify the strengths and weaknesses of arguments and make informed decisions based on evidence and reasoning</p>
+                                        <div class="d-grid gap-2 d-md-block mt-auto">
+                                            <form action="{{url_for('tools')}}" method="post">
+                                                <button type="submit" name="skill" class="btn btn-primary"
+                                                    value="Critical Reasoning">
+                                                    <span class="place">Tools</span>
+                                                </button>
+                                            </form>
+                                            <form action="{{url_for('paper')}}" method="post">
+                                                <button type="submit" class="btn btn-primary" name="skill"
+                                                    value="Critical Reasoning">
+                                                    <span class="place">Paper</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 2 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h1>Social Skills</h1>
+                <div class="container">
+                    <div class="modal-body">
+                        <!-- Project details-->
+                        <div class="container justify-content-center">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                                    <div class="card shadow p-3 mb-5 bg-white rounded">
+                                        <h4>Communication</h4>
+                                        <p>Ability to effectively convey information through written, verbal,
+                                            and nonverbal means. It is crucial in all aspects of life, including personal
+                                            relationships, work, and social situations. Thus it is important because it helps to build trust,
+                                            avoid misunderstandings, and foster positive relationships.</p>
+                                        <div class="d-grid gap-2 d-md-block mt-auto">
+                                            <form action="{{url_for('tools')}}" method="post">
+                                                <button type="submit" name="skill" class="btn btn-primary"
+                                                    value="Communication">
+                                                    <span class="place">Tools</span>
+                                                </button>
+                                            </form>
+                                            <form action="{{url_for('paper')}}" method="post">
+                                                <button type="submit" class="btn btn-primary" name="skill"
+                                                    value="Communication">
+                                                    <span class="place">Paper</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                                    <div class="card shadow p-3 mb-5 bg-white rounded">
+                                        <!-- Add your content for container 2 -->
+                                        <h4>Leadership</h4>
+                                        <p>Ability to inspire, motivate, and guide others towards a common goal,
+                                            to communicate effectively,
+                                            delegate tasks, and make decisions in a fair and ethical manner. It
+                                            is important because it helps to
+                                            create a positive work environment, increase productivity, and
+                                            achieve organizational goals.</p>
+                                        <div class="d-grid gap-2 d-md-block mt-auto">
+                                            <form action="{{url_for('tools')}}" method="post">
+                                                <button type="submit" name="skill" class="btn btn-primary"
+                                                    value="Leadership">
+                                                    <span class="place">Tools</span>
+                                                </button>
+                                            </form>
+                                            <form action="{{url_for('paper')}}" method="post">
+                                                <button type="submit" class="btn btn-primary" name="skill"
+                                                    value="Leadership">
+                                                    <span class="place">Paper</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4 d-flex ">
+                                    <div class="card shadow p-3 mb-5 bg-white rounded">
+                                        <!-- Add your content for container 3 -->
+                                        <h4>Empathy</h4>
+                                        <p>Ability to understand and share the feelings and perspectives of
+                                            others. It involves being able to put
+                                            yourself in someone else's shoes and see things from their point of
+                                            view, as well as being able to
+                                            identify and understand their emotions.</p>
+                                        <div class="d-grid gap-2 d-md-block mt-auto">
+                                            <form action="{{url_for('tools')}}" method="post">
+                                                <button type="submit" name="skill" class="btn btn-primary"
+                                                    value="Empathy">
+                                                    <span class="place">Tools</span>
+                                                </button>
+                                            </form>
+                                            <form action="{{url_for('paper')}}" method="post">
+                                                <button type="submit" class="btn btn-primary" name="skill"
+                                                    value="Empathy">
+                                                    <span class="place">Paper</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Portfolio item 3 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h1>Emotional Skills</h1>
+                <div class="container">
+                    <div class="modal-body">
+                        <!-- Project details-->
+                        <div class="container justify-content-center ">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                                    <div class="card shadow p-3 mb-5 bg-white rounded">
+                                        <!-- Add your content for container 1 -->
+                                        <h4>Resilience</h4>
+                                        <p>Ability to adapt and bounce back from adversity , whether in personal or professional life. It involves a combination of mental, emotional, and behavioral skills that enable individuals to cope with stress.</p>
+                                        <div class="d-grid gap-2 d-md-block mt-auto">
+                                            <form action="{{url_for('tools')}}" method="post">
+                                                <button type="submit" name="skill" class="btn btn-primary"
+                                                    value="Resilience">
+                                                    <span class="place">Tools</span>
+                                                </button>
+                                            </form>
+                                            <form action="{{url_for('paper')}}" method="post">
+                                                <button type="submit" class="btn btn-primary" name="skill"
+                                                    value="Resilience">
+                                                    <span class="place">Paper</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                                    <div class="card shadow p-3 mb-5 bg-white rounded">
+                                        <!-- Add your content for container 2 -->
+                                        <h4>Emotional Regulation</h4>
+                                        <p>Ability to manage and control one's own emotions in a healthy and productive way. It involves recognizing and understanding one's own emotions, and being able to respond to them in a way that is appropriate and adaptive to the situation.</p>
+                                        <div class="d-grid gap-2 d-md-block mt-auto">
+                                            <form action="{{url_for('tools')}}" method="post">
+                                                <button type="submit" name="skill" class="btn btn-primary"
+                                                    value="Emotional Regulation">
+                                                    <span class="place">Tools</span>
+                                                </button>
+                                            </form>
+                                            <form action="{{url_for('paper')}}" method="post">
+                                                <button type="submit" class="btn btn-primary" name="skill"
+                                                    value="Emotional Regulation">
+                                                    <span class="place">Paper</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    
+</body>
+
+</html>
